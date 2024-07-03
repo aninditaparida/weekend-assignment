@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOODIE FINDS</title>
+    <style>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 10px;
+
+
+        }
+        .nav-bar {
+            background-color: rgb(31, 77, 62);
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            width: 200px;
+            height: 40px; 
+            border-radius: 50;
+            background-color: #406b7a;
+            margin-right:10px;
+        }
+        .logo-img {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+
+        }
+        .site-name {
+            font-size: 28px;
+            font-weight: bold;
+            margin-right: 20px;
+            position:relative;
+            margin-left: 10px;
+
+        }
+       
+        .content-boxes {
+            display:flex ;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .text-box {
+            width: 100%;
+            height: 0%;
+            padding: 60px;
+            align-items: center;
+        }
+        .image-box {
+            width: 100vw;
+            padding: 100px;
+        }
+        .image-box img {
+            width: 100%;
+            height: auto;
+        }
+        .reversed {
+            flex-direction: row-reverse;
+
+        }
+        .video-box {
+            width: 90%;
+            padding: 20px;
+            background-color: #f0f0f0;
+            align-items: center;
+        }
+        .video-box iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+            align-items: center;
+
+        }
+        .footer-text {
+            background-color: #f0f0f0;
+            padding: 20px;
+            text-align: center;
+            border: 1p;
+            color: #666;
+        }
+        header {
+            padding: 10px;
+            margin-bottom: 1px;
+
+        }
+        nav {
+            display: flex;
+            justify-content:safe;
+            align-items: center;
+            padding: 5px;
+            margin: auto;
+            background-color: #f1f1f1;
+
+        }
+        .logo {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            margin-right: 10px;
+
+        }
+        nav a.site-name {
+            flex: 1;
+            text-align: left;
+
+        }
+        nav a {
+            text-decoration: none;
+            font-family: 'Franklin Gothic Medium';
+            font-weight: bolder;
+            color: rgb(0, 0, 0);
+            padding: 20px;
+            border-radius: 5px;
+         
+        }
+        nav a.contact:hover {
+            background-color: cyan;
+
+        }
+        nav a.contact:active {
+            background-color: #ccc;
+
+        }
+        </style>
+    </head>
+<body style="background-color:whitesmoke;">
+    <header>
+        <nav>
+            <img src="food-logo2.jpg" alt="logo" class="logo" style="width: 100px; height: 100px;" >
+            <a href="mainpage.html" class="site-name"><P>FOODIE FINDS</p></a>
+            <a href="contact.html"><p style="font-size: xx-large;">CONTACT</p></a>
+         </nav>
+    </header>
+    <div class="container">
+        <div class="container" style="text-align: center; background-color: rgb(139, 59, 142);">
+            WELCOME FOOD LOVERS!!
+        </div><br>
+        <div>
+            welcome to foodie finds where every bite tells a delicious story.Step into a world of culinary delights at FOODIE FINDS,where good food meets great company.Get ready to satisfy your cravings and explore new flavors.Savor the moment with our collection of mouthwatering recipes. Any help or any queries ,do contact us.
+        </div><br>
+        <div>
+            FORM
+            <br><br>
+            <form action = "javascript:submitForm()" onSubmit = "return validate()">
+                <table class="table" >
+                    <tr>
+                        <td><label for="name">Name:</label></td>
+                        <td><input type="text" id="name" name="name" placeholder="e.g Anindita" required></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="email" id="email" name="email" placeholder="xyz@gmail.com" required><span id="emailerr"></span></td>
+                    </tr>
+                    <tr>
+                        <td><label for="venue">venue:</label></td>
+                        <td><input list="venue" name="venue" id="venue" placeholder="tap to see" required></td>
+                    </tr>
+                        <datalist id="venue">
+                            <option value="ODISHA HOTEL"></option>
+                            <option value="PATIALA HOUSE"></option>
+                            <option value="BIRYANI BOX"></option>
+                            <option value="CHAI BREAK"></option>
+                            <option value="CHOPS AND GRILLS"></option>
+                        </datalist>
+                </table>
+                <br>
+                <input type="checkbox" id="myCheckbox" name="myCheckbox" checked value="yes" required>
+                <label for="myCheckbox">Subscribe  to get updated about the new offers.</label>
+                <br><br>
+                <input type="submit" name="submit" value="submit" style="align-items: center;" >
+
+            </form>
+            <script>
+               
+               function validate() {
+        let validated = true;
+        let ele1 = document.getElementById("name");
+        let ele2 = document.getElementById("gener")
+        if (ele1.value.length < 0) {
+          window.alert("Name can not be empty");
+          validated = false;
+        } 
+        return validated;
+        const form = document.getElementById('myForm');
+	const nameInput = document.getElementById('name');
+	const emailInput = document.getElementById('email');
+
+	form.addEventListener('submit', function(event) {
+		if (nameInput.value.trim() === '' || emailInput.value.trim() === '') {
+			event.preventDefault();
+			alert('Please fill in all required fields!');
+		}
+	});
+
+      }
+      function submitForm() {
+        window.alert("Form Submitted");
+      }
+  
+                
+              </script>
+            
+        </div>
+    
+
+    </div>
+    <div class="footer-text">
+		<p>All rights are reserved</p>
+	</div>
+</body>
+</html>
